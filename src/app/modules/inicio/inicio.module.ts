@@ -3,12 +3,32 @@ import { CommonModule } from '@angular/common';
 
 import { InicioRoutingModule } from './inicio-routing.module';
 
+//vista-pagina-interfaz del usuario
+import { InicioComponent } from './pages/inicio/inicio.component';
+
+//componentes locales
+import { CardComponent } from './components/card/card.component';
+
+//componentes que importamos desde material
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    InicioComponent,
+    CardComponent
+  ],
   imports: [
     CommonModule,
-    InicioRoutingModule
+    InicioRoutingModule, 
+    MatButtonModule,
+    MatCardModule
+  ], 
+  exports : [ 
+    MatButtonModule,
+    MatCardModule
   ]
+
 })
 export class InicioModule { }
